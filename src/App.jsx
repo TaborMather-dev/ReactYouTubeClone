@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import VideoPlayer from './VideoPlayer';
-import axios from "axios";
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import axios from 'axios';
 
 
 class App extends Component {
+    state = {
+        videoName = "",
+        comment = "",
+        likes = "",
+        dislikes = "",
+        reply = ""
+    };
 
-    constructor(props) {
-        super(props);
-        this.Comments = [
-
-        ];
-    }
+    return
     render() {
         return (
             <div className="container-fluid">

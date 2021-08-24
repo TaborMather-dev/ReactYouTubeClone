@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from './components/VideoPlayer';
 
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
-        this.Comments = [
-
-        ];
-    }
+    return
     render() {
         return (
             <div className="container-fluid">

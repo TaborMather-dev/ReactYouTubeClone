@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import VideoPlayer from './components/VideoPlayer';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import axios from 'axios';
 
 
 class App extends Component {
+    state = {
+        videoName = "",
+        comment = "",
+        likes = "",
+        dislikes = "",
+        reply = ""
+    };
 
     return
     render() {

@@ -1,36 +1,21 @@
 import React from 'react';
-import './VideoPlayer.css';
-import Comment from '.Comment/Comment'
-import
 
-    class VideoPlayer extends Component {
-        constructor(props) {
-            super(props)
-            this.state = [
-                video_id = {}
-            body = get_objects.Comment(body = null)
-            likes = get_obejects.Comment(likes = null)
-            dislikes = get_obejects(dislikes = null)
-            ];
+const VideoPlayer = ({ selectedVideo }) => {
+    if (!selectedVideo) return <div>Please select a video.</div>
 
-        }
+    const srcVid = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`;
 
-
-    }
-
-return
-render(
-    <div className="container-fluid" >
-        <div className="row">
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
+    return (
+        <div>
+            <iframe width="560" height="315" type="text/html" width="1000" height="562.5"
+                src={srcVid}
+                frameborder="0">
             </iframe>
-        </div>
-    </div >
-)
-    }
+            <h2>{selectedVideo.snippet.title}</h2>
+            <h4>{selectedVideo.snippet.channelTitle}</h4>
+            <p>{selectedVideo.snippet.description}</p>
+        </div >
+    );
+};
 
 export default VideoPlayer;

@@ -5,12 +5,16 @@ import axios from 'axios';
 
 class App extends Component {
     state = {
-        videoName = "",
-        comment = "",
-        likes = "",
-        dislikes = "",
-        reply = ""
-    };
+        videos: [],
+        selectedVideo: null,
+        comments: [],
+    }
+
+    onVideoSelection = (video) => {
+        this.setState({ selectedVideo: video })
+        this.getComments();
+        console.log("in onVideoSelection", this.state.comments);
+    }
 
     return
     render() {

@@ -1,10 +1,7 @@
 import React from 'react';
 
+function Comment() {
 
-class Comment extends Component() {
-    constructor(props) {
-        super(props)
-        this.state = 
 }
 
-    export default AddComment;
+export default Comment;

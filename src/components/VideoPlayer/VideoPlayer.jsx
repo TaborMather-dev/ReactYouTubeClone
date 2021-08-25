@@ -7,7 +7,7 @@ const VideoPlayer = ({ selectedVideo }) => {
 
     return (
         <div>
-            <iframe width="560" height="315" type="text/html" width="1000" height="562.5"
+            <iframe id="youtubeplayer" width="560" height="315" type="text/html" width="1000" height="562.5"
                 src={srcVid}
                 frameborder="0">
             </iframe>

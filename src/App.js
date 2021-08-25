@@ -1,6 +1,9 @@
+import './App.css';
 import React, { Component } from 'react';
+import VideoSearchForm from './components/VideoSearchForm/VideoSearchForm/';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import Video from './components/Video/Video';
+import Comment from './components/Comment/Comment';
 import axios from 'axios';
 
 
@@ -8,15 +11,38 @@ class App extends Component {
     state = {
         videos: [],
         selectedVideo: null,
-        comments: [],
+        comments: []
+    }
+    async componentDidMount() {
+        {
+            try {
+                let response = await axios.get("http//:127.0.0.1:8000/youtubeclone_app/")
+                this.setState({
+                    data: response.data
+                })
+                console.log(response.data)
+                if (!response.data) (){
+                    finally() => {
+                        void (this.componentDidMount)
+                    }
+                }
+                    console.log("error")
+                }
+            }
+
+    onVideoSelection = async (selectedVideo) => {
+        let selectedVideo = this.state.video;
+        selectedVideo = video.video_id
+        if (video == this.state)
+            return (video.video_id)
+        }
+    }
+    onHandleChange = async (event) => {
+        
+        }
     }
 
-    onVideoSelection = (video) => {
-        this.setState({ selectedVideo: video })
-        this.getComments();
-        console.log("in onVideoSelection", this.state.comments);
-    }
-    onHandleSubmit = async (searchTerms) => {
+    onHandleSubmit = async (event) => {
         try {
             const response = await youtube.get('search', {
                 params: {
@@ -28,7 +54,6 @@ class App extends Component {
         }
     }
 
-    return
     render() {
         return (
             <div className="container-fluid">
@@ -37,9 +62,8 @@ class App extends Component {
                         <div className="body">
                             <VideoPlayer />
                             <Video />
-
-                            
-
+                            <VideoSearchForm />
+                            <Comment />
                         </div>
                     </div>
                 </div>

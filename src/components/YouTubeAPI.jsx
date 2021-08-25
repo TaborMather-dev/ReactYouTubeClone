@@ -5,14 +5,15 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
         width: '640',
-        videoId: 'M7lc1UVf-VE',
+        videoId: {(video_id)
+    },
         playerVars: {
-            'playsinline': 1
-        },
+        'playsinline': 1
+    },
         events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+    }
     };
 
-    export default onYouTubeIframeAPIReady;
+export default onYouTubeIframeAPIReady;
